@@ -1,9 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>ly.bit</groupId>
-    <artifactId>nsq</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <groupId>org.walkmod</groupId>
+    <artifactId>nsq-java</artifactId>
+    <version>1.1</version>
     <name>Java NSQ Client</name>
+    <url>https://github.com/rpau/nsq-java</url>
+	<licenses>
+		<license>
+			<name>Bitly Copyright</name>
+			<url></url>
+		</license>
+	</licenses>
     <dependencies>
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
@@ -61,6 +68,43 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
+            <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
         </plugins>
     </build>
+  
+	<scm>
+		<url>https://github.com/rpau/nsq-java</url>
+		<connection>https://github.com/rpau/nsq-java.git</connection>
+	</scm>
+	<developers>
+		<developer>
+			<id>rpau</id>
+			<name>rpau</name>
+			<email>raquelpau@gmail.com</email>
+		</developer>
+	</developers>
+	<description>Java client for NSQ</description>
 </project>
